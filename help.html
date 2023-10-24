@@ -426,14 +426,38 @@
         $(document).ready(function() {
 
             function button_a(){
+
+                $('a').each(function() {
+
+                    var linkText = $(this).text().trim();
+                    if (linkText === "We’re busier than usual, so if you'd rather not wait, click here to learn more about these changes.") {
+                        $(this).attr('href', ''); 
+                    }
+                    if (linkText === 'Trouble logging in?'){
+                        $(this).attr('href', '');
+                    }
+                    if (linkText === 'Contact us') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Log in') {
+                        $(this).attr('href', '/web/');  
+                    }
+                    if (linkText === 'Register') {
+                        $(this).attr('href', '/web'); 
+                    }
+
+                });
+
+
                 $('a.css-3l99kw.eowdypp1').attr('href', '/wise/');
                 $('a.css-jfc53c.eowdypp0').attr('href', '/wise/');
-                $('a[href="/help/contact/flows/logged-out"]').attr('href', '');
-                $('a[href="https://wise.com/help/articles/2G69Jf6EEvf5TvYSlA8XjQ/were-changing-your-usd-account-details"]').attr('href', '');
 
-                $('a[href="/login/?redirectUrl=%2Fhelp"]').attr('href', '');
-                $('a[href="/login/?redirectUrl=%2Fhelp"]').attr('href', '');
-                $('a[href="/login/?redirectUrl=/help/contact"]').attr('href', '');
+                // $('a[href="/login/?redirectUrl=%2Fhelp"]').attr('href', '');
+                // $('a[href="/help/contact/flows/logged-out"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2G69Jf6EEvf5TvYSlA8XjQ/were-changing-your-usd-account-details"]').attr('href', '');
+                // $('a[href="/login/?redirectUrl=%2Fhelp"]').attr('href', '');
+                // $('a[href="/login/?redirectUrl=/help/contact"]').attr('href', '');
                 
                 
             }

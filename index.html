@@ -20402,13 +20402,43 @@
         $(document).ready(function() {
 
             function button_a(){
-                $('a.np-link.btn.btn-primary.btn-priority-2').attr('href', 'send-money.html');
-                $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');
-                $('a.np-link.d-inline-flex.btn.btn-accent.btn-priority-2').attr('href', 'card.html');
-                $('a.btn.btn-md.np-btn.np-btn-md.btn-accent.btn-priority-1').attr('href', '');
-                $('a.btn.btn-primary.m-t-2').attr('href', '');
-                $('a[href="https://wise.com/?referrer=singular_click_id%3D8ed65c62-066f-41e5-bcbc-009f8c2adeb3"]').attr('href', '');
-                $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
+
+                $('a').each(function() {
+                    var linkText = $(this).text().trim();
+
+                    if (linkText === 'Open an account') {
+                        $(this).attr('href', ''); 
+                    }
+                    if (linkText === 'Send money now') {
+                        $(this).attr('href', 'send-money.html'); 
+                    }
+                    if (linkText === 'Get started') {
+                        $(this).attr('href', ''); 
+                    }
+                    if (linkText === 'Learn about our mission') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'How we keep your money safe') {
+                        $(this).attr('href', '');
+                    }
+                });
+
+                 $('a.np-link').each(function() {
+                    var linkText = $(this).text().trim();
+
+                    if (linkText === 'Learn more') { 
+                        $(this).attr('href', 'card.html');
+                    }
+                });
+
+                // $('a.np-link.btn.btn-primary.btn-priority-2').attr('href', 'send-money.html');
+                // $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');
+                // $('a.np-link.d-inline-flex.btn.btn-accent.btn-priority-2').attr('href', 'card.html');
+                // $('a.btn.btn-md.np-btn.np-btn-md.btn-accent.btn-priority-1').attr('href', '');
+                // $('a.btn.btn-primary.m-t-2').attr('href', '');
+                // $('a[href="https://wise.com/?referrer=singular_click_id%3D8ed65c62-066f-41e5-bcbc-009f8c2adeb3"]').attr('href', '');
+                // $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
             }
             
             button_a();

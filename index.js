@@ -46,10 +46,10 @@ $(document).ready(function() {
         var linkText = $(this).text();
 
         if (linkText === 'Log in') {
-            $(this).attr('href', ''); 
+            $(this).attr('href', '/web');  
         }
         if (linkText === 'Register') {
-            $(this).attr('href', ''); 
+            $(this).attr('href', '/web'); 
         }
     });
 

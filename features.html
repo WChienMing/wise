@@ -445,10 +445,28 @@
 
             function button_a(){
 
-                $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn.btn-accent').attr('href', '');
-                $('a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'send-money.html');
-                $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.justify-content-center.m-t-2 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'card.html');
+                $('a').each(function() {
 
+                    var linkText = $(this).text().trim();
+
+                    if (linkText === 'Open an account') {
+                        $(this).attr('href', ''); 
+                    }
+                    if (linkText === 'Check available details') {
+                        $(this).attr('href', ''); 
+                    }
+                    if (linkText === 'Send money now') {
+                        $(this).attr('href', 'send-money.html'); 
+                    }
+                    if (linkText === 'Get a Wise card') {
+                        $(this).attr('href', 'card.html'); 
+                    }
+
+                });
+
+                // $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn.btn-accent').attr('href', '');
+                // $('a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'send-money.html');
+                // $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.justify-content-center.m-t-2 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'card.html');
 
             }
             button_a();

@@ -783,15 +783,45 @@
 
             function button_a(){
 
-                $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');
+                 $('a').each(function() {
+
+                    var linkText = $(this).text().trim();
+                    if (linkText === 'Learn more') {
+                        $(this).attr('href', ''); 
+                    }
+
+                    if (linkText === 'Read on Trustpilot') {
+                        $(this).attr('href', ''); 
+                    }
+
+                    if (linkText === 'Get started') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Learn how to stay safe') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Download the full guide') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Learn more about documents') {
+                        $(this).attr('href', '');
+                    }
+
+                });
+
+
                 $('ul.text-xs-left a.tw-link-with-chevron').attr('href', '');
-                $('a[href="/help/articles/2976418/what-documents-might-i-need-for-a-large-transfer"]').attr('href', '');
-                $('a[href="/public-resources/assets/send-flow/documents/high-amount/wise_guide_to_sending_large_amounts_jan_2023_v3.pdf"]').attr('href', '');
-                $('a[href="/gb/blog/never-allow-access-to-your-account"]').attr('href', '');
-                $('a[href="https://www.trustpilot.com/review/wise.com?languages=en"]').attr('href', '');
                 $('a[href="/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
-
-
+                
+                // $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');
+                // $('a[href="/help/articles/2976418/what-documents-might-i-need-for-a-large-transfer"]').attr('href', '');
+                // $('a[href="/public-resources/assets/send-flow/documents/high-amount/wise_guide_to_sending_large_amounts_jan_2023_v3.pdf"]').attr('href', '');
+                // $('a[href="/gb/blog/never-allow-access-to-your-account"]').attr('href', '');
+                // $('a[href="https://www.trustpilot.com/review/wise.com?languages=en"]').attr('href', '');
+                
 
 
             }

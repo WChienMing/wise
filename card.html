@@ -545,8 +545,31 @@
 
             function button_a(){
 
-                $('a.btn.btn-accent').attr('href', '');
+                $('a').each(function() {
 
+                    var linkText = $(this).text().trim();
+                    if (linkText === 'Order your card') {
+                        $(this).attr('href', ''); 
+                    }
+
+                    if (linkText === 'Learn about our card pricing') {
+                        $(this).attr('href', ''); 
+                    }
+
+                    if (linkText === 'Learn more about virtual cards') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Google Pay') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Apple Pay') {
+                        $(this).attr('href', '');
+                    }
+
+                });
+                // $('a.btn.btn-accent').attr('href', '');
 
             }
             button_a();

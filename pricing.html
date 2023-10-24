@@ -606,15 +606,31 @@
     <script>
         $(document).ready(function() {
 
-            function check(){
-                $('a.navigation-button.d-inline-block.p-t-5.m-t-3.text-xs-center.text-md-left').attr('href', '');
+
+            function button_a(){
+
+                $('a').each(function() {
+
+                    var linkText = $(this).text().trim();
+                    if (linkText === 'Switch to Wise Business') {
+                        $(this).attr('href', ''); 
+                    }
+
+                });
+
+                $('a[href="/my/pricing/send-money"]').attr('href', '');
+                $('a[href="/my/pricing/card-fees"]').attr('href', '');
+                $('a[href="/my/pricing/receive"]').attr('href', '');
+                $('a[href="/my/pricing/hold-fees"]').attr('href', '');
+                
+                // $('a.navigation-button.d-inline-block.p-t-5.m-t-3.text-xs-center.text-md-left').attr('href', '');
                 
             }
             
-            check();
+            button_a();
 
             setInterval(function() {
-                check();
+                button_a();
             }, 1000);
             
         });

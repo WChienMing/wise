@@ -1641,25 +1641,77 @@
 
             function button_a(){
 
-                $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');
-                $('a[href="/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
-                $('a[href="https://wise.com/us/blog/wise-uk-price-comparison-research"]').attr('href', '');
-                $('a[href="/my/pricing/send-money"]').attr('href', '');
-                $('a[href="/my/send-money/instant-money-transfer"]').attr('href', '');
+                $('a').each(function() {
 
+                    var linkText = $(this).text().trim();
+                    if (linkText === 'online money transfers') {
+                        $(this).attr('href', ''); 
+                    }
 
-                $('a[href="https://wise.com/community/mission-and-philosophy"]').attr('href', '');
-                $('a[href="https://wise.com/gb/compare/disclaimer"]').attr('href', '');
-                $('a[href="https://wise.com/help/15/paying-for-your-transfer/2559761/paying-by-bank-transfer"]').attr('href', '');
-                $('a[href="/gb/blog/never-allow-access-to-your-account"]').attr('href', '');
+                    if (linkText === 'Learn more') {
+                        $(this).attr('href', ''); 
+                    }
 
-                $('a.mw-body-2-bold').attr('href', '');
-                $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
-                $('a[href="https://wise.com/register/"]').attr('href', '');
+                    if (linkText === 'Get started') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'for people without borders.') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'How do we collect this data?') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Discount applies') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Read more how to use bank transfers as a payment option.') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Learn how to stay safe') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Learn more about the Wise app') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Sign up for free') {
+                        $(this).attr('href', '');
+                    }
+
+                });
+
                 $('a[href="https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
+                $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
                 $('a[href="https://wise.com/help/articles/2571907/what-currencies-can-i-send-to-and-from"]').attr('href', '');
                 $('a[href="https://wise.com/help/articles/2736041/is-wise-safe"]').attr('href', '');
                 $('a[href="https://wise.com/help/articles/2949782/guide-to-getting-verified"]').attr('href', '');
+
+
+                // $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');
+                // $('a[href="/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
+                // $('a[href="https://wise.com/us/blog/wise-uk-price-comparison-research"]').attr('href', '');
+                // $('a[href="/my/pricing/send-money"]').attr('href', '');
+                // $('a[href="/my/send-money/instant-money-transfer"]').attr('href', '');
+
+
+                // $('a[href="https://wise.com/community/mission-and-philosophy"]').attr('href', '');
+                // $('a[href="https://wise.com/gb/compare/disclaimer"]').attr('href', '');
+                // $('a[href="https://wise.com/help/15/paying-for-your-transfer/2559761/paying-by-bank-transfer"]').attr('href', '');
+                // $('a[href="/gb/blog/never-allow-access-to-your-account"]').attr('href', '');
+
+                // $('a.mw-body-2-bold').attr('href', '');
+                // $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
+                // $('a[href="https://wise.com/register/"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2571907/what-currencies-can-i-send-to-and-from"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2736041/is-wise-safe"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2949782/guide-to-getting-verified"]').attr('href', '');
 
 
 
