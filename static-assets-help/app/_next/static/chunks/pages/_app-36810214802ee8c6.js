@@ -22814,7 +22814,7 @@
                                     })
                                 }), !h && (0, r.BX)(r.HY, {
                                     children: [(0, r.tZ)("a", {
-                                        href: "/login/",
+                                        href: "/web",
                                         className: "btn btn-primary",
                                         rel: "noreferrer",
                                         target: l ? "_blank" : "_self",
@@ -32868,7 +32868,7 @@
                         type: "accent",
                         priority: "tertiary",
                         size: "sm",
-                        href: "/login/",
+                        href: "/web",
                         style: {
                             textDecoration: "none"
                         },
