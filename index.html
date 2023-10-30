@@ -308,6 +308,19 @@
     .bg-tapestry-3 {
         background-image: url(static-assets/app/_next/static/media/tapestry-3.ceefa502.svg);
     }
+    .section.section--pad-lg.np-theme-personal.np-theme-personal--bright-green{
+        display: none !important;
+    }
+    .np-link.btn.btn-primary:not(.d-inline-flex) {
+        display: none;
+    }
+    .np-chip.d-flex.align-items-center.justify-content-between.text-xs-nowrap:not(.np-chip--selected){
+        display: none;
+    }
+
+ 
+
+
     </style>
 </head>
 
@@ -20407,10 +20420,10 @@
                     var linkText = $(this).text().trim();
 
                     if (linkText === 'Open an account') {
-                        $(this).attr('href', ''); 
+                        $(this).attr('href', '');
                     }
                     if (linkText === 'Send money now') {
-                        $(this).attr('href', 'send-money.html'); 
+                        $(this).attr('href', 'send-money.html');
                     }
                     if (linkText === 'Get started') {
                         $(this).attr('href', ''); 
@@ -20420,8 +20433,12 @@
                     }
 
                     if (linkText === 'How we keep your money safe') {
-                        $(this).attr('href', '');
+                        $(this).attr('href', 'javascript:void(0);'); 
+                        $(this).click(function(event) {
+                            event.preventDefault();
+                        });
                     }
+                    
                 });
 
                  $('a.np-link').each(function() {
@@ -20430,6 +20447,8 @@
                     if (linkText === 'Learn more') { 
                         $(this).attr('href', 'card.html');
                     }
+
+
                 });
 
                 // $('a.np-link.btn.btn-primary.btn-priority-2').attr('href', 'send-money.html');
@@ -20445,6 +20464,19 @@
             setInterval(function() {
                 button_a();
             }, 1000);
+            
+
+            $('a.np-link').each(function() {
+                var linkText = $(this).text().trim();
+
+                if (linkText === 'Learn more') { 
+                    $(this).css('display', 'none');
+                }
+
+                if (linkText === 'Order your card') { 
+                    $(this).css('display', 'none');
+                }
+            });
 
         });
     </script>

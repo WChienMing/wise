@@ -1,5 +1,15 @@
 $(document).ready(function() {
-
+    $(".body-3 a").attr('href', 'javascript:void(0);').click(function(event) {
+        event.preventDefault();
+    });
+    $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
+        event.preventDefault();
+    });
+    $(".footer-title").each(function() {
+        if ($(this).text() === 'Follow us') {
+            $(this).closest('.row').hide();
+        }
+    });
 
     function checkLinks(){
         
