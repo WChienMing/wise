@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 
     function checkLinks(){
-        $('a.tw-public-nav__logo-link.tw-public-nav__logo-link--text').attr('href', '/wise/');
+        $('a.tw-public-nav__logo-link.tw-public-nav__logo-link--text').attr('href', '/wise/cn/');
         $('li.tw-public-nav__item a.tw-link-with-chevron').attr('href', 'pricing.html');
         $('li.tw-public-nav__menu-item-help a.tw-link-with-chevron').attr('href', 'help.html');
         $('ul.tw-public-nav__dropdown-menu li:eq(0) a').attr('href', 'account.html');

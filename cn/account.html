@@ -2002,43 +2002,49 @@
     <script>
         $(document).ready(function() {
 
+            $(".layout-module__grid-columns").each(function() {
+                var title = $(this).find('.layout-module__title').text().trim();
+                if (title === "用 Wise 收益功能讓您的資金增值") {
+                    $(this).hide();
+                }
+            });
             function button_a(){
 
                 $('a').each(function() {
                     var linkText = $(this).text().trim();
 
-                    if (linkText === 'Open an account') {
+                    if (linkText === '開設帳戶') {
                         $(this).attr('href', ''); 
                     }
-                    if (linkText === 'See our pricing') {
+                    if (linkText === '查看我們的價格') {
                         $(this).attr('href', 'pricing.html'); 
                     }
-                    if (linkText === 'Manage your money') {
+                    if (linkText === '管理您的資金') {
                         $(this).attr('href', 'features.html'); 
                     }
-                    if (linkText === 'Get a Wise card') {
+                    if (linkText === '申請 Wise 借記卡') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Learn more') {
+                    if (linkText === '了解詳情') {
                         $(this).attr('href', 'card.html');
                     }
 
-                    if (linkText === 'Send money for less') {
+                    if (linkText === '以更划算的價格匯款') {
                         $(this).attr('href', '');
                     }
-                     if (linkText === "How we're getting our fees to zero") {
+                     if (linkText === "我們如何將費用降至最低") {
                         $(this).attr('href', '');
                     }
                 });
 
-                $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn.btn-accent').attr('href', '');
-                $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn-priority-2.btn.btn-accent').attr('href', 'pricing.html');
-                $('a.btn.btn-accent.layout-module__cta').attr('href', 'features.html');
-                $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.m-t-5 a.btn.btn-accent.layout-module__cta').attr('href', '');
-                $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.m-t-5 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'card.html');
-                $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.m-t-5 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', '');
-                $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.justify-content-center.m-t-2 a.btn.btn-accent.layout-module__cta').attr('href', '');
+                // $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn.btn-accent').attr('href', '');
+                // $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn-priority-2.btn.btn-accent').attr('href', 'pricing.html');
+                // $('a.btn.btn-accent.layout-module__cta').attr('href', 'features.html');
+                // $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.m-t-5 a.btn.btn-accent.layout-module__cta').attr('href', '');
+                // $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.m-t-5 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'card.html');
+                // $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.m-t-5 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', '');
+                // $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.justify-content-center.m-t-2 a.btn.btn-accent.layout-module__cta').attr('href', '');
 
             }
             button_a();

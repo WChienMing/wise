@@ -2011,7 +2011,7 @@
     "homepageDocumentDescription": "{cardAcceptedInCountries}多個國家/地區、{mcaCurrencyCount}種貨幣、一個帳戶。進行國際匯款、消費及管理資金的同時節省金錢。",
     "homepageTwitterTitle": "Wise：國際匯款 | 匯無國界",
     "homepageTwitterDescription": "{cardAcceptedInCountries}多個國家/地區、{mcaCurrencyCount}種貨幣、一個帳戶。進行國際匯款、消費及管理資金的同時節省金錢。",
-    "sendMoneyDocumentTitle": "電匯 | 海外匯款 - Wise（前稱爲TransferWise）",
+    "sendMoneyDocumentTitle": "전신송금 | 해외송금 - Wise (이전 TransferWise)",
     "sendMoneyDocumentDescription": "看看你透過使用Wise可以節省多少錢。更好的國際匯款方式。超過{millionUsers}00萬名客戶、80個國家/地區、40多種貨幣。",
     "rebrandBanner.title": "哇！全新面貌！",
     "rebrandBanner.cta": "了解詳情",
@@ -2022,7 +2022,7 @@
     "moneyTransfer.hero.sendOnly.title": "便宜、快捷的國際匯款方式。",
     "moneyTransfer.hero.video.cta": "{locale, select, IN {了解如何從印度匯款} other {使用説明}}",
     "hero.cta.newUser": "在數分鐘內便可開設帳戶",
-    "hero.cta.existingUser": "開始使用",
+    "hero.cta.existingUser": "사용을 시작하다",
     "hero.estimate": "預計到賬時間",
     "hero.savings": "相比銀行可節省",
     "hero.estimate.delivery": "{deliveryEstimate} 예상 도착",
@@ -2276,7 +2276,7 @@
     "shoppingSection.desktop.heading3.br": "每次購物付款時都感到額外安全.",
     "shoppingSection.description3": "通過3-D Secure身份驗證來授權付款。接收即時的消費通知。",
     "shoppingSection.description3.br": "無論你身在巴西還是海外，都可以通過3D安全驗證授權網上付款，並在你付款時收到即時通知。安心購物。",
-    "gettingStartedSection.supporting": "開始使用",
+    "gettingStartedSection.supporting": "사용을 시작하다",
     "gettingStartedSection.supporting.br": "即將推出",
     "gettingStartedSection.title": "完成設置並開始使用你的卡消費.",
     "gettingStartedSection.title.br": "Wise卡的使用方法：",
@@ -2314,7 +2314,7 @@
     "gettingStartedSection.linkText.newUser": "在數分鐘內便可開設帳戶",
     "gettingStartedSection.linkText.orderCard": "申請Wise卡",
     "gettingStartedSection.linkText.newUser.br": "註冊",
-    "gettingStartedSection.linkText.existingUser": "開始使用",
+    "gettingStartedSection.linkText.existingUser": "사용을 시작하다",
     "gettingStartedSection.lg.col4.description.ca": "分享你的銀行賬戶資料以進行收款，或使用Wise卡在世界各地消費。",
     "customerServiceSection.title": "以多種語言在全球提供支援",
     "customerServiceSection.title.br": "服務覆蓋全球，支持多種語言",
@@ -2398,7 +2398,7 @@
     "hat.stickyNav.support": "支援",
     "hat.trackYourMoneySection.title": "追蹤匯款狀態",
     "hat.trackYourMoneySection.subtitle": "實時追蹤你的錢。隨時在Wise應用程式或網站上查看進度。",
-    "hat.trackYourMoneySection.link": "開始使用",
+    "hat.trackYourMoneySection.link": "사용을 시작하다",
     "hat.stepByStepGuideSection.title": "如何匯出大筆金額",
     "hat.stepByStepGuideSection.supporting": "如何運作",
     "hat.stepByStepGuideSection.item1.title": "1. 開設免費的Wise帳戶",
@@ -17742,53 +17742,77 @@
                 $('a').each(function() {
 
                     var linkText = $(this).text().trim();
-                    if (linkText === 'online money transfers') {
+                    if (linkText === '온라인 송금') {
                         $(this).attr('href', ''); 
                     }
 
-                    if (linkText === 'Learn more') {
+                    if (linkText === '자세히 알아보기') {
                         $(this).attr('href', ''); 
                     }
 
-                    if (linkText === 'Get started') {
+                    if (linkText === '사용을 시작하다') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'for people without borders.') {
+                    if (linkText === '세계 곳곳에 발을 내디쳐 있는 여러분에게 혜택을 주기 위한 것입니다.') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'How do we collect this data?') {
+                    if (linkText === '이 데이터를 어떻게 수집하는지 알아보세요.') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Discount applies') {
+                    if (linkText === '할인 적용 가능') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Read more how to use bank transfers as a payment option.') {
+                    if (linkText === '즉시 입금') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Learn how to stay safe') {
+                    if (linkText === '은행 이체') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Learn more about the Wise app') {
+                    if (linkText === '은행 이체로 송금을 결제하는 방법을 자세히 알아보세요.') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Sign up for free') {
+                    if (linkText === '자신을 보호하는 방법을 알아보세요') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Wise 앱에 대해 자세히 알아보기') {
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === '무료 등록'){
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === '우리가 어떻게 다른 국가/지역에서 감독 받는지 알아보세요'){
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === '도움말 센터'){
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === 'Wise가 어떻게 안전한지 알아보기'){
+                        $(this).attr('href', '');
+                    }
+
+                    if (linkText === '인증에 관한 자세한 내용 알아보기'){
                         $(this).attr('href', '');
                     }
 
                 });
 
-                $('a[href="https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
-                $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
-                $('a[href="https://wise.com/help/articles/2571907/what-currencies-can-i-send-to-and-from"]').attr('href', '');
-                $('a[href="https://wise.com/help/articles/2736041/is-wise-safe"]').attr('href', '');
-                $('a[href="https://wise.com/help/articles/2949782/guide-to-getting-verified"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2932693/how-is-wise-regulated-in-each-country"]').attr('href', '');
+                // $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2571907/what-currencies-can-i-send-to-and-from"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2736041/is-wise-safe"]').attr('href', '');
+                // $('a[href="https://wise.com/help/articles/2949782/guide-to-getting-verified"]').attr('href', '');
 
 
                 // $('a.btn.btn-block.btn-primary.d-flex.justify-content-center').attr('href', '');

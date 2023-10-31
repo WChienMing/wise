@@ -620,7 +620,7 @@
                             <div class="css-jodbou eowdypp2"><a href="/" class="css-3l99kw eowdypp1"><img alt="Wise" data-testid="wise-flag-logo" loading="lazy" width="23" height="24" decoding="async" data-nimg="1" style="color:transparent" src="public-resources/assets/logos/wise-personal/flag.svg" /></a><a href="/" class="css-jfc53c eowdypp0"><img alt="Wise" data-testid="wise-brand-logo" loading="lazy" width="95" height="24" decoding="async" data-nimg="1" style="color:transparent" src="public-resources/assets/logos/wise-personal/logo.svg" /></a></div>
                         </div>
                         <div class="css-f2hq0u e15okxk30">
-                            <div class="css-xtl0bx e12gkd401"><a class="btn btn-sm np-btn np-btn-sm btn-accent btn-priority-3" href="/web" style="text-decoration:none">Log in</a><a class="btn btn-sm np-btn np-btn-sm btn-accent btn-priority-1" href="/web">Register</a><button type="button" aria-controls="nav-menu" aria-label="Toggle navigation menu" class="css-xjlxhd e1flffrj0"><span class="tw-icon tw-icon-menu " aria-hidden="true" role="presentation" data-testid="menu-icon"><svg width="24" height="24" fill="currentColor" focusable="false" viewBox="0 0 24 24">
+                            <div class="css-xtl0bx e12gkd401"><a class="btn btn-sm np-btn np-btn-sm btn-accent btn-priority-3" href="/web" style="text-decoration:none">로그인</a><a class="btn btn-sm np-btn np-btn-sm btn-accent btn-priority-1" href="/web">등록하다</a><button type="button" aria-controls="nav-menu" aria-label="Toggle navigation menu" class="css-xjlxhd e1flffrj0"><span class="tw-icon tw-icon-menu " aria-hidden="true" role="presentation" data-testid="menu-icon"><svg width="24" height="24" fill="currentColor" focusable="false" viewBox="0 0 24 24">
                                             <path fill-rule="evenodd" d="M19.714 6.004H4.286v1.714h15.428V6.004Zm0 5.144H4.286v1.715h15.428v-1.715ZM4.286 16.29h15.428v1.715H4.286v-1.715Z" clip-rule="evenodd"></path>
                                         </svg></span></button></div>
                         </div>
@@ -953,6 +953,10 @@
             }
         });
 
+        $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
+            event.preventDefault();
+        });
+
         $(".css-1gz942 .css-1mat06o").on('click', function(event) {
             event.preventDefault();
         }).css('pointer-events', 'none').css('opacity', '1');
@@ -962,13 +966,13 @@
             $('a').each(function() {
 
                 var linkText = $(this).text().trim();
-                if (linkText === "We’re busier than usual, so if you'd rather not wait, click here to learn more about these changes.") {
+                if (linkText === "평소보다 더 바쁘기 때문에 기다리기 싫으시면 여기를 클릭해 이러한 변경 사항에 대해 자세히 알아보세요.") {
                     $(this).attr('href', '');
                 }
-                if (linkText === 'Trouble logging in?') {
+                if (linkText === '로그인하는 중에 문제가 발생했습니다.?') {
                     $(this).attr('href', '');
                 }
-                if (linkText === 'Contact us') {
+                if (linkText === '문의하기') {
                     $(this).attr('href', '');
                 }
 

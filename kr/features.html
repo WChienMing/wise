@@ -1054,28 +1054,43 @@
     <script>
         $(document).ready(function() {
 
+
+            $(".layout-module__grid-rows").each(function() {
+                var title = $(this).find('.layout-module__title').text().trim();
+                if (title === "귀하의 돈을 가치 있게 키우세요") {
+                    $(this).hide();
+                }
+            });
+
+            $("a.btn.btn-accent.layout-module__cta").each(function() {
+                if ($(this).text() === "지원하는 통화 보기") {
+                    $(this).hide();
+                }
+            });
+
+            
             function button_a(){
 
                 $('a').each(function() {
 
                     var linkText = $(this).text().trim();
 
-                    if (linkText === 'Open an account') {
+                    if (linkText === '사용 가능한 계정 정보 확인') {
                         $(this).attr('href', ''); 
                     }
-                    if (linkText === 'Check available details') {
+                    if (linkText === '수익 기능 알아보기') {
                         $(this).attr('href', ''); 
                     }
-                    if (linkText === 'Send money now') {
+                    if (linkText === '즉시 송금') {
                         $(this).attr('href', 'send-money.html'); 
                     }
-                    if (linkText === 'Get a Wise card') {
+                    if (linkText === 'Wise 신용카드 신청') {
                         $(this).attr('href', 'card.html'); 
                     }
 
                 });
 
-                // $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn.btn-accent').attr('href', '');
+                $('div.d-flex.flex-wrap.gap.order-1.m-b-4.justify-content-center a.btn.btn-accent').attr('href', '');
                 // $('a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'send-money.html');
                 // $('div.layout-module__cta-container.d-flex.flex-wrap.gap.order-1.justify-content-center.m-t-2 a.btn-priority-2.btn.btn-accent.layout-module__cta').attr('href', 'card.html');
 

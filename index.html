@@ -322,8 +322,6 @@
         display: none;
     }
  
-
-
     </style>
 </head>
 
@@ -20412,6 +20410,7 @@
     }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js"></script>
     <script>
         $(document).ready(function() {
@@ -20481,6 +20480,15 @@
             });
 
         });
+
+        $(document).ready(function() {
+        var htmlContent = '<li class="tw-public-nav__item tw-public-nav__menu-item-help"><span class="tw-public-nav__menu-item-text text-ellipsis "><button class="tw-public-nav__dropdown-toggle tw-link-with-chevron" type="button" aria-expanded="false"><span class="tw-public-nav__menu-item-text text-ellipsis ">EN</span><svg class="tw-link-with-chevron-icon" width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M3.96289 3.99999L0.962891 7.46409L0.962891 0.535889L3.96289 3.99999Z" fill="var(--color-interactive-primary)"></path></svg></button></span></li>';
+    
+    $('.tw-public-nav__item.tw-public-nav__menu-item-help').after(htmlContent);
+});
+
+
+
     </script>
 </body>
 

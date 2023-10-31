@@ -131,6 +131,7 @@
     .bg-tapestry-3 {
         background-image: url(static-assets/app/_next/static/media/tapestry-3.ceefa502.svg);
     }
+
     </style>
 </head>
 
@@ -2000,33 +2001,38 @@
     <script src="index_1.js"></script>
     <script>
         $(document).ready(function() {
-
+            $(".layout-module__grid-columns").each(function() {
+                var title = $(this).find('.layout-module__title').text().trim();
+                if (title === "Wise 수익 기능으로 자금을 증식하세요") {
+                    $(this).hide();
+                }
+            });
             function button_a(){
 
                 $('a').each(function() {
                     var linkText = $(this).text().trim();
 
-                    if (linkText === 'Open an account') {
+                    if (linkText === '계정 열기') {
                         $(this).attr('href', ''); 
                     }
-                    if (linkText === 'See our pricing') {
+                    if (linkText === '가격 보기') {
                         $(this).attr('href', 'pricing.html'); 
                     }
-                    if (linkText === 'Manage your money') {
+                    if (linkText === '자금 관리하기') {
                         $(this).attr('href', 'features.html'); 
                     }
-                    if (linkText === 'Get a Wise card') {
+                    if (linkText === 'Wise 데빗 카드 신청') {
                         $(this).attr('href', '');
                     }
 
-                    if (linkText === 'Learn more') {
+                    if (linkText === '자세히 알아보기') {
                         $(this).attr('href', 'card.html');
                     }
 
-                    if (linkText === 'Send money for less') {
+                    if (linkText === '더 저렴한 가격에 송금하기') {
                         $(this).attr('href', '');
                     }
-                     if (linkText === "How we're getting our fees to zero") {
+                     if (linkText === "요금을 어떻게 최소화하고 있는지 알아보기") {
                         $(this).attr('href', '');
                     }
                 });

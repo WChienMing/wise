@@ -967,6 +967,10 @@
             }
         });
 
+        $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
+            event.preventDefault();
+        });
+
         $(".css-1gz942 .css-1mat06o").on('click', function(event) {
             event.preventDefault();
         }).css('pointer-events', 'none').css('opacity', '1');
