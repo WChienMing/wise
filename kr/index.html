@@ -20424,16 +20424,20 @@
                     var linkText = $(this).text().trim();
 
                     if (linkText === '엄격한') {
-                        $(this).attr('href', '');
+                        $(this).attr('href', 'javascript:void(0);'); 
+                        $(this).click(function(event) {
+                            event.preventDefault();
+                        });
                     }
+
                     if (linkText === '비즈니스 계정 열기') {
-                        $(this).attr('href', '');
+                        $(this).attr('href', '/web');
                     }
                     if (linkText === '자세히 알아보기') {
-                        $(this).attr('href', ''); 
+                        this.style.setProperty('display', 'none', 'important');
                     }
                     if (linkText === '우리의 미션에 대해') {
-                        $(this).attr('href', '');
+                        this.style.setProperty('display', 'none', 'important');
                     }
 
                     if (linkText === '귀하의 자금을 어떻게 보호하는지') {

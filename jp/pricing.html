@@ -1749,6 +1749,24 @@
     <script>
         $(document).ready(function() {
 
+            var heroContent = document.querySelector('.hero-content');
+
+            if (heroContent) {
+                Array.from(heroContent.childNodes).forEach(function(node) {
+                    if (node.nodeType === 3) {
+                        var text = node.textContent;
+                        if (text.includes('お住まいの国') || text.includes('マレーシア')) {
+                            var newText = text.replace('お住まいの国', '').replace('マレーシア', '');
+                            var newNode = document.createTextNode(newText);
+                            heroContent.replaceChild(newNode, node);
+                        }
+                    }
+                });
+            }
+
+            $('tr[data-testid="cardHeader"], tr[data-testid="cardWithdrawal"],tr[data-testid="cardAtmFee"],tr[data-testid="cardAtmFunding"],tr[data-testid="cardOrderFee"],tr[data-testid="cardConvertFee"]').css('display', 'none');
+
+            $('tr[data-testid="receiveUsdWireFee"], tr[data-testid="receiveCAD"]').css('display', 'none');
 
             function button_a(){
 
@@ -1756,7 +1774,7 @@
 
                     var linkText = $(this).text().trim();
                     if (linkText === 'Wise法人アカウントに切り替える') {
-                        $(this).attr('href', ''); 
+                        $(this).attr('href', '/web');
                     }
 
                 });

@@ -20428,17 +20428,30 @@
                     var linkText = $(this).text().trim();
 
                     if (linkText === 'Wiseのミッションを見る') {
-                        $(this).attr('href', ''); 
+                        this.style.setProperty('display', 'none', 'important');
                     }
-                    if (linkText === '厳格な規準で守ります') {
-                        $(this).attr('href', '');
-                    }
+    
 
                     if (linkText === '資金の安全性について見る') {
                         $(this).attr('href', 'javascript:void(0);'); 
                         $(this).click(function(event) {
                             event.preventDefault();
                         });
+                    }
+
+                    if (linkText === '厳格な規準で守ります') {
+                        $(this).attr('href', 'javascript:void(0);'); 
+                        $(this).click(function(event) {
+                            event.preventDefault();
+                        });
+                    }
+
+                    if (linkText === '法人アカウントを開設する') {
+                        $(this).attr('href', '/web');
+                    }
+
+                    if (linkText === '詳細を見る') {
+                        this.style.setProperty('display', 'none', 'important');
                     }
                     
                 });

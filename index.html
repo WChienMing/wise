@@ -756,7 +756,7 @@
                                                     </svg>
                                                 </span>
                                             </div>
-                                            <p class="mw-body-3-bold m-b-0">We protect your details through <a href="https://wise.com/gb/about/security">strict standards</a>
+                                            <p class="mw-body-3-bold m-b-0">We protect your details through <a href="">strict standards</a>
                                             </p>
                                         </li>
                                     </ul>
@@ -20430,7 +20430,7 @@
                         $(this).attr('href', ''); 
                     }
                     if (linkText === 'Learn about our mission') {
-                        $(this).attr('href', '');
+                        this.style.setProperty('display', 'none', 'important');
                     }
 
                     if (linkText === 'How we keep your money safe') {
@@ -20438,6 +20438,21 @@
                         $(this).click(function(event) {
                             event.preventDefault();
                         });
+                    }
+
+                    if (linkText === 'strict standards') {
+                        $(this).attr('href', 'javascript:void(0);'); 
+                        $(this).click(function(event) {
+                            event.preventDefault();
+                        });
+                    }
+
+                    if (linkText === 'Open a Business account') {
+                        $(this).attr('href', '/web');
+                    }
+
+                    if (linkText === 'Learn more') {
+                        this.style.setProperty('display', 'none', 'important');
                     }
                     
                 });

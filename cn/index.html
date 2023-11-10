@@ -20432,11 +20432,7 @@
                     // }
                     
                     if (linkText === '關於我們的使命') {
-                        $(this).attr('href', '');
-                    }
-
-                    if (linkText === '遵守嚴格') {
-                        $(this).attr('href', '');
+                        this.style.setProperty('display', 'none', 'important');
                     }
 
                     if (linkText === '我們如何保障你的資金安全') {
@@ -20444,6 +20440,21 @@
                         $(this).click(function(event) {
                             event.preventDefault();
                         });
+                    }
+
+                    if (linkText === '遵守嚴格') {
+                        $(this).attr('href', 'javascript:void(0);'); 
+                        $(this).click(function(event) {
+                            event.preventDefault();
+                        });
+                    }
+
+                    if (linkText === '開設商業帳戶') {
+                        $(this).attr('href', '/web');
+                    }
+
+                    if (linkText === '了解更多') {
+                        this.style.setProperty('display', 'none', 'important');
                     }
                     
                 });

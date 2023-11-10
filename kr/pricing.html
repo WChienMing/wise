@@ -1779,6 +1779,24 @@
     <script>
         $(document).ready(function() {
 
+            var heroContent = document.querySelector('.hero-content');
+
+            if (heroContent) {
+                Array.from(heroContent.childNodes).forEach(function(node) {
+                    if (node.nodeType === 3) {
+                        var text = node.textContent;
+                        if (text.includes('이 국가/지역의 주민 대상:') || text.includes('말레이시아')) {
+                            var newText = text.replace('이 국가/지역의 주민 대상:', '').replace('말레이시아', '');
+                            var newNode = document.createTextNode(newText);
+                            heroContent.replaceChild(newNode, node);
+                        }
+                    }
+                });
+            }
+
+            $('tr[data-testid="cardHeader"], tr[data-testid="cardWithdrawal"],tr[data-testid="cardAtmFee"],tr[data-testid="cardAtmFunding"],tr[data-testid="cardOrderFee"],tr[data-testid="cardConvertFee"]').css('display', 'none');
+
+            $('tr[data-testid="receiveUsdWireFee"], tr[data-testid="receiveCAD"]').css('display', 'none');
 
             function button_a(){
 
