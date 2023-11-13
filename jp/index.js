@@ -1,10 +1,19 @@
 $(document).ready(function() {
+
+    var links = document.querySelectorAll('div.footer-bottom-item a.footer-link');
+
+    links.forEach(function(link) {
+        if (link.textContent.trim() === '反社会的勢力に対する基本方針') {
+            link.parentElement.style.display = 'none';
+        }
+    });
+
     $(".body-3 a").attr('href', 'javascript:void(0);').click(function(event) {
         event.preventDefault();
     });
-    $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
-        event.preventDefault();
-    });
+    // $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
+    //     event.preventDefault();
+    // });
     $(".footer-title").each(function() {
         if ($(this).text() === 'Follow us') {
             $(this).closest('.row').hide();
@@ -22,7 +31,7 @@ $(document).ready(function() {
         $('ul.tw-public-nav__dropdown-menu li:eq(2) a').attr('href', 'card.html');
         $('ul.tw-public-nav__dropdown-menu li:eq(3) a').attr('href', 'send-money.html');
         $('ul.tw-public-nav__dropdown-menu li:eq(4) a').attr('href', 'large-amounts.html');
-        $('a.footer-link').attr('href', '');
+        // $('a.footer-link').attr('href', '');
         $('a.link-icon').attr('href', '');
     }
     
@@ -61,7 +70,22 @@ $(document).ready(function() {
         if (linkText === 'Register') {
             $(this).attr('href', '/web'); 
         }
+
+        // footer
+        if (linkText === '利用規約' || linkText === 'Legal') {
+            $(this).attr('href', 'terms-and-conditions.html'); 
+        }
+
+        if (linkText === '個人情報保護方針' || linkText === 'Privacy policy') {
+            $(this).attr('href', 'global-privacy-policy-en.html'); 
+        }
+
+        if (linkText === 'クッキーの取り扱いについて' || linkText === 'Cookie Policy') {
+            $(this).attr('href', 'cookie-policy.html'); 
+        }
     });
+
+
 
 });
 

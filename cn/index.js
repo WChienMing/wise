@@ -2,9 +2,9 @@ $(document).ready(function() {
     $(".body-3 a").attr('href', 'javascript:void(0);').click(function(event) {
         event.preventDefault();
     });
-    $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
-        event.preventDefault();
-    });
+    // $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
+    //     event.preventDefault();
+    // });
     $(".footer-title").each(function() {
         if ($(this).text() === 'Follow us') {
             $(this).closest('.row').hide();
@@ -22,7 +22,7 @@ $(document).ready(function() {
         $('ul.tw-public-nav__dropdown-menu li:eq(2) a').attr('href', 'card.html');
         $('ul.tw-public-nav__dropdown-menu li:eq(3) a').attr('href', 'send-money.html');
         $('ul.tw-public-nav__dropdown-menu li:eq(4) a').attr('href', 'large-amounts.html');
-        $('a.footer-link').attr('href', '');
+        // $('a.footer-link').attr('href', '');
         $('a.link-icon').attr('href', '');
     }
     
@@ -60,6 +60,19 @@ $(document).ready(function() {
         }
         if (linkText === 'Register') {
             $(this).attr('href', '/web'); 
+        }
+
+        // footer
+        if (linkText === '法律' || linkText === 'Legal') {
+            $(this).attr('href', 'terms-and-conditions.html'); 
+        }
+
+        if (linkText === '私隱政策' || linkText === 'Privacy policy') {
+            $(this).attr('href', 'global-privacy-policy-en.html'); 
+        }
+
+        if (linkText === 'Cookie 政策' || linkText === 'Cookie Policy') {
+            $(this).attr('href', 'cookie-policy.html'); 
         }
     });
 
