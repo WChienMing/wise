@@ -97,6 +97,18 @@ $(document).ready(function() {
         if (linkText === 'Cookie Policy') {
             $(this).attr('href', 'cookie-policy.html'); 
         }
+
+        if (linkText === 'Help center') {
+            $ $(this).attr('href', 'complaint.html'); 
+        }
+
+        if (linkText === 'Modern slavery statement') {
+            $(this).attr('href', 'images_cf1beb39f5b9261166281ad9ccaa9f30-Modern_Slavery_and_Human_Trafficking_Statement_for_Wise_Group_.pdf'); 
+        }
+
+        if (linkText === 'Country site map') {
+            $(this).attr('href', '#'); 
+        }
     });
 
 

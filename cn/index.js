@@ -74,6 +74,19 @@ $(document).ready(function() {
         if (linkText === 'Cookie 政策' || linkText === 'Cookie Policy') {
             $(this).attr('href', 'cookie-policy.html'); 
         }
+
+        if (linkText === '帮助中心') {
+             $(this).attr('href', 'complaint.html');  
+        }
+
+        if (linkText === '現代奴役法案') {
+            $(this).attr('href', 'images_cf1beb39f5b9261166281ad9ccaa9f30-Modern_Slavery_and_Human_Trafficking_Statement_for_Wise_Group_.pdf'); 
+        }
+
+        if (linkText === '國家網站地圖') {
+            $(this).attr('href', '#'); 
+        }
+
     });
 
 });

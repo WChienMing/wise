@@ -123,6 +123,18 @@ $(document).ready(function() {
         if (linkText === 'クッキーの取り扱いについて' || linkText === 'Cookie Policy') {
             $(this).attr('href', 'cookie-policy.html'); 
         }
+
+        if (linkText === '苦情') {
+            $(this).attr('href', 'complaint.html'); 
+        }
+
+        if (linkText === '現代奴隷法に関する声明') {
+            $(this).attr('href', 'images_cf1beb39f5b9261166281ad9ccaa9f30-Modern_Slavery_and_Human_Trafficking_Statement_for_Wise_Group_.pdf'); 
+        }
+
+        if (linkText === '各国のサイトリスト') {
+            $(this).attr('href', '#'); 
+        }
     });
 
 
