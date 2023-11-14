@@ -20,6 +20,13 @@ $(document).ready(function() {
         }
     });
 
+    $('a.footer-link').each(function() {
+        if ($(this).text().trim() === '各国のサイトリスト') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+    });
+
+
     function checkLinks(){
         
 

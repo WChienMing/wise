@@ -11,6 +11,12 @@ $(document).ready(function() {
         }
     });
 
+    $('a.footer-link').each(function() {
+        if ($(this).text().trim() === '國家網站地圖') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+    });
+
     function checkLinks(){
         
 

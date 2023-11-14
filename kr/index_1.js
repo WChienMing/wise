@@ -14,6 +14,12 @@ $(document).ready(function() {
         }
     });
 
+    $('a.footer-link').each(function() {
+        if ($(this).text().trim() === '국가 웹사이트 지도') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+    });
+
     function addItems() {
         var windowWidth = $(window).width();
         var $menu = $('.tw-public-nav__dropdown-menu');

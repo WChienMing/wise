@@ -14,6 +14,13 @@ $(document).ready(function() {
         }
     });
 
+    $('a.footer-link').each(function() {
+        if ($(this).text().trim() === '國家網站地圖') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+    });
+
+
     function addItems() {
         var windowWidth = $(window).width();
         var $menu = $('.tw-public-nav__dropdown-menu');
