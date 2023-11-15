@@ -65,7 +65,7 @@ $(document).ready(function() {
             $(this).attr('href', '/web');  
         }
         if (linkText === 'Register') {
-            $(this).attr('href', '/web'); 
+            $(this).attr('href', '/register'); 
         }
 
         // footer
