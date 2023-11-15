@@ -29,6 +29,12 @@ $(document).ready(function() {
         }
     });
 
+    $('a.footer-link').each(function() {
+        if ($(this).text().trim() === 'Country site map') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+    });
+
     function addItems() {
         var windowWidth = $(window).width();
         var $menu = $('.tw-public-nav__dropdown-menu');
@@ -130,15 +136,15 @@ $(document).ready(function() {
             $(this).attr('href', 'cookie-policy.html'); 
         }
 
-        if (linkText === '苦情') {
+        if (linkText === '苦情' || linkText === 'Help center') {
             $(this).attr('href', 'complaint.html'); 
         }
 
-        if (linkText === '現代奴隷法に関する声明') {
+        if (linkText === '現代奴隷法に関する声明' || linkText === 'Modern slavery statement') {
             $(this).attr('href', 'images_cf1beb39f5b9261166281ad9ccaa9f30-Modern_Slavery_and_Human_Trafficking_Statement_for_Wise_Group_.pdf'); 
         }
 
-        if (linkText === '各国のサイトリスト') {
+        if (linkText === '各国のサイトリスト' || linkText === 'Country site map') {
             $(this).attr('href', '#'); 
         }
     });

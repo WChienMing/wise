@@ -26,6 +26,12 @@ $(document).ready(function() {
         }
     });
 
+    $('a.footer-link').each(function() {
+        if ($(this).text().trim() === 'Country site map') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+    });
+
 
     function checkLinks(){
         
