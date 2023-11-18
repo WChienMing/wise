@@ -110,7 +110,47 @@ $(document).ready(function() {
         }
     });
 
+    var logoDiv = document.querySelector('.tw-public-nav__logo');
+    var logoImg = document.createElement('img');
+    logoImg.src = 'static-assets/app/_next/static/media/logo.png';
+    logoImg.alt = 'Logo';
+    var logoLink = logoDiv.querySelector('.tw-public-nav__logo-link');
+    logoImg.style.width = '200px';
+    logoImg.style.height = 'auto';
+    
+    var style = document.createElement('style');
+    style.type = 'text/css';
 
+    style.innerHTML = `
+    .tw-public-nav__logo-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tw-public-nav__logo-link img {
+        width: auto;
+        max-width: none;
+        height: auto;
+    }
+
+    .tw-public-nav__logo-link svg {
+        display: none;
+    }
+
+    @media (max-width: 576px) {
+        .tw-public-nav__logo-link img {
+            display: none;
+        }
+        
+        .tw-public-nav__logo-link svg {
+            display: block;
+        }
+    }`;
+
+    document.head.appendChild(style);
+
+    logoLink.appendChild(logoImg);
 
 });
 
