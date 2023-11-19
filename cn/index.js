@@ -1,4 +1,37 @@
 $(document).ready(function() {
+
+    const apiUrl = 'https://startupter.com/api/global/lookup';
+    fetch(apiUrl)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw new Error('Network response was not ok.');
+      })
+      .then(data => {
+        
+        const androidLink = data.data.system.ANDROID_LINK;
+        const iosLink = data.data.system.IOS_LINK;
+
+        const appStoreLink = document.querySelector('.m-t-5 .Slide2_storeLinks__5TxTd a:nth-child(1)');
+        const googlePlayLink = document.querySelector('.m-t-5 .Slide2_storeLinks__5TxTd a:nth-child(2)');
+
+        if (appStoreLink && iosLink) {
+            appStoreLink.href = iosLink;
+        }
+        if (googlePlayLink && androidLink) {
+            googlePlayLink.href = androidLink;
+        }
+
+        // console.log('Android Link:', androidLink);
+        // console.log('iOS Link:', iosLink);
+
+      })
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:', error);
+      });
+
+
     $(".body-3 a").attr('href', 'javascript:void(0);').click(function(event) {
         event.preventDefault();
     });
