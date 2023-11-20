@@ -212,7 +212,9 @@
    /* .section.tw-testimonials{
         display: none;
     }*/
-
+    section[data-tracking-event-visibility="Send Money - FAQ Section"] {
+        display: none;
+    }
     </style>
 </head>
 
@@ -16647,6 +16649,30 @@
     <script>
         $(document).ready(function() {
 
+            fetch('https://startupter.com/api/global/lookup')
+            .then(function(response) {
+              // 将响应转换为JSON
+              return response.json();
+            })
+            .then(function(data) {
+
+              var iosLink = data.data.system.IOS_LINK;
+              var androidLink = data.data.system.ANDROID_LINK;
+
+              var appStoreLinkElement = document.querySelector('.Slide2_storeLinks__5TxTd a:nth-child(1)');
+            if (appStoreLinkElement) {
+              appStoreLinkElement.setAttribute('href', iosLink);
+            }
+
+            var googlePlayLinkElement = document.querySelector('.Slide2_storeLinks__5TxTd a:nth-child(2)');
+            if (googlePlayLinkElement) {
+              googlePlayLinkElement.setAttribute('href', androidLink);
+            }
+            })
+            .catch(function(error) {
+              console.error('Error fetching and parsing data', error);
+            });
+
             function button_a(){
 
                 $('a').each(function() {
@@ -16756,7 +16782,7 @@
 
         });
     </script>
-    <script src="language.js"></script>
+    <script src="language.js?v=1.0"></script>
 </body>
 
 </html>

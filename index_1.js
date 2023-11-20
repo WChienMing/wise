@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "static-assets/app/_next/static/media/logo.png");
+
     $(".body-3 a").attr('href', 'javascript:void(0);').click(function(event) {
         event.preventDefault();
     });

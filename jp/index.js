@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "static-assets/app/_next/static/media/logo.png");
+
     const apiUrl = 'https://startupter.com/api/global/lookup';
     fetch(apiUrl)
       .then(response => {

@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+     function lang(){
     
         var cssContent = `
             .tw-public-nav__item {
@@ -36,16 +38,16 @@ $(document).ready(function() {
         var htmlContent = `<li class="tw-public-nav__item tw-public-nav__menu-item-help">
         <span class="tw-public-nav__menu-item-text text-ellipsis ">
         <button class="tw-public-nav__dropdown-toggle tw-link-with-chevron" type="button" aria-expanded="false">
-        <span class="tw-public-nav__menu-item-text text-ellipsis ">KR</span>
+        <span class="tw-public-nav__menu-item-text text-ellipsis ">EN</span>
         <svg class="tw-link-with-chevron-icon" width="4" height="8" viewBox="0 0 4 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
         <path d="M3.96289 3.99999L0.962891 7.46409L0.962891 0.535889L3.96289 3.99999Z" fill="var(--color-interactive-primary)"></path>
         </svg>
         </button>
         <ul class="dropdown-menu">
-        <li><a href="/wise/` + lastPart + `">EN</a></li>
-        <li><a href="/wise/jp/` + lastPart + `">Japanese</a></li>
-        <li><a href="/wise/kr/` + lastPart + `">Korean</a></li>
-        <li><a href="/wise/cn/` + lastPart + `">中文（繁體）</a></li>
+        <li><a href="/wise/` + lastPart + `" style="color: #000;">EN</a></li>
+        <li><a href="/wise/jp/` + lastPart + `" style="color: #000;">Japanese</a></li>
+        <li><a href="/wise/kr/` + lastPart + `" style="color: #000;">Korean</a></li>
+        <li><a href="/wise/cn/` + lastPart + `" style="color: #000;">中文（繁體）</a></li>
         </ul>
         </span>
         </li>`;
@@ -61,4 +63,12 @@ $(document).ready(function() {
                 menu.show();
             }
         });
+
+    }
+
+    lang();
+
+    setInterval(function() {
+        lang();
+    }, 1000);
 });

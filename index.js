@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "static-assets/app/_next/static/media/logo.png");
 
     const apiUrl = 'https://startupter.com/api/global/lookup';
     fetch(apiUrl)
@@ -17,13 +18,13 @@ $(document).ready(function() {
         const appStoreLink = document.querySelector('.m-t-5 .Slide2_storeLinks__5TxTd a:nth-child(1)');
         const googlePlayLink = document.querySelector('.m-t-5 .Slide2_storeLinks__5TxTd a:nth-child(2)');
 
+
         if (appStoreLink && iosLink) {
             appStoreLink.href = iosLink;
         }
         if (googlePlayLink && androidLink) {
             googlePlayLink.href = androidLink;
         }
-
         // console.log('Android Link:', androidLink);
         // console.log('iOS Link:', iosLink);
 

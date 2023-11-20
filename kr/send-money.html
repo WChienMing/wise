@@ -209,6 +209,9 @@
     .bg-tapestry-3 {
         background-image: url(static-assets/app/_next/static/media/tapestry-3.ceefa502.svg);
     }
+    section[data-tracking-event-visibility="Send Money - FAQ Section"] {
+        display: none;
+    }
     </style>
 </head>
 
@@ -17737,6 +17740,31 @@
     <script>
         $(document).ready(function() {
 
+            const apiUrl = 'https://startupter.com/api/global/lookup';
+            fetch(apiUrl)
+              .then(response => {
+                if (response.ok) {
+                  return response.json();
+                }
+                throw new Error('Network response was not ok.');
+              })
+              .then(data => {
+                
+                const androidLink = data.data.system.ANDROID_LINK;
+                const iosLink = data.data.system.IOS_LINK;
+
+                $('a[href="https://wise-app.sng.link/Apnl5/big8?_dl=tw%3A%2F%2F&_smtype=3"]').attr('href', androidLink);
+
+                // console.log('Android Link:', androidLink);
+                // console.log('iOS Link:', iosLink);
+
+              })
+              .catch(error => {
+                console.error('There has been a problem with your fetch operation:', error);
+              });
+
+
+
             function button_a(){
 
                 $('a').each(function() {
@@ -17846,7 +17874,7 @@
 
         });
     </script>
-    <script src="language.js"></script>
+    <script src="language.js?v=1.0"></script>
 </body>
 
 </html>

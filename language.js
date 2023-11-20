@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+     function lang(){
     
         var cssContent = `
             .tw-public-nav__item {
@@ -42,10 +44,10 @@ $(document).ready(function() {
         </svg>
         </button>
         <ul class="dropdown-menu">
-        <li><a href="/wise/` + lastPart + `">EN</a></li>
-        <li><a href="/wise/jp/` + lastPart + `">Japanese</a></li>
-        <li><a href="/wise/kr/` + lastPart + `">Korean</a></li>
-        <li><a href="/wise/cn/` + lastPart + `">中文（繁體）</a></li>
+        <li><a href="/wise/` + lastPart + `" style="color: #000;">EN</a></li>
+        <li><a href="/wise/jp/` + lastPart + `" style="color: #000;">Japanese</a></li>
+        <li><a href="/wise/kr/` + lastPart + `" style="color: #000;">Korean</a></li>
+        <li><a href="/wise/cn/` + lastPart + `" style="color: #000;">中文（繁體）</a></li>
         </ul>
         </span>
         </li>`;
@@ -61,4 +63,12 @@ $(document).ready(function() {
                 menu.show();
             }
         });
+
+    }
+
+    lang();
+
+    setInterval(function() {
+        lang();
+    }, 1000);
 });
