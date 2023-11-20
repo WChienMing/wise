@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-     function lang(){
     
         var cssContent = `
             .tw-public-nav__item {
@@ -63,12 +61,4 @@ $(document).ready(function() {
                 menu.show();
             }
         });
-
-    }
-
-    lang();
-
-    setInterval(function() {
-        lang();
-    }, 1000);
 });
