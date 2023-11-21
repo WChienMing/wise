@@ -12,7 +12,7 @@
     <link rel="icon" href="https://wise.com/public-resources/assets/icons/wise-personal/android_chrome_192x192.png" />
     <link rel="icon" href="https://wise.com/public-resources/assets/icons/wise-personal/android_chrome_256x256.png" />
     <meta name="msapplication-square150x150logo" content="https://wise.com/public-resources/assets/icons/wise-personal/mstile_150x150.png" />
-    <meta property="twitter:image:src" content="https://wise.com/public-resources/assets/icons/wise-personal/share_landscape.png" />
+    <meta property="twitter:image:src" content="https://startupter.com/wise/static-assets/app/_next/static/media/logo.png" />
     <meta property="og:image" content="https://startupter.com/wise/static-assets/app/_next/static/media/logo.png" />
     <script class="gtm" async src="https://gtm.wise.com/gtm.js?id=GTM-M7V2XH"></script>
     <script type="text/javascript">
@@ -934,7 +934,7 @@
                                 <div class="footer-bottom-item text-xs-center text-md-left footer-title"><a class="footer-link" href="/cookie-policy">쿠키 정책</a></div>
                                 <div class="footer-bottom-item text-xs-center text-md-left footer-title"><a class="footer-link" href="/help/articles/2235393/how-do-i-make-a-complaint">도움말 센터</a></div>
                                 <div class="footer-bottom-item text-xs-center text-md-left footer-title"><a class="footer-link" href="/local-sites">국가 웹사이트 지도</a></div>
-                                <div class="footer-bottom-item text-xs-center text-md-left footer-title"><a class="footer-link" href="/public-resources/assets/public-navigation/modern_slavery_statement.pdf">현대 노예법</a></div>
+                                <div class="footer-bottom-item text-xs-center text-md-left footer-title"><a class="footer-link" href="/public-resources/assets/public-navigation/modern_slavery_statement.pdf">현대 노예제</a></div>
                             </div>
                         </div>
                         <div class="row text-xs-center m-t-5">
@@ -951,6 +951,8 @@
     </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js?v=1.0"></script>
     <script>
     $(document).ready(function() {
         $(".footer-title").each(function() {
@@ -959,9 +961,9 @@
             }
         });
 
-        $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
-            event.preventDefault();
-        });
+        // $(".footer-link").attr('href', 'javascript:void(0);').click(function(event) {
+        //     event.preventDefault();
+        // });
 
         $(".css-1gz942 .css-1mat06o").on('click', function(event) {
             event.preventDefault();

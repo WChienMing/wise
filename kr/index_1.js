@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    document.querySelector('meta[property="og:image"]').setAttribute("content", "static-assets/app/_next/static/media/logo.png");
 
     $(".body-3 a").attr('href', 'javascript:void(0);').click(function(event) {
         event.preventDefault();
@@ -18,6 +17,9 @@ $(document).ready(function() {
 
     $('a.footer-link').each(function() {
         if ($(this).text().trim() === '국가 웹사이트 지도') {
+            $(this).closest('.footer-bottom-item').hide();
+        }
+        if ($(this).text().trim() === '국가/지역 사이트 지도') {
             $(this).closest('.footer-bottom-item').hide();
         }
     });
@@ -118,29 +120,30 @@ $(document).ready(function() {
         }
 
         // footer
-        if (linkText === '법률' || linkText === 'Legal') {
+        if (linkText === '법률' || linkText === '법률 고지' || linkText === 'Legal') {
             $(this).attr('href', 'terms-and-conditions.html'); 
         }
 
-        if (linkText === '개인 정보 보호' || linkText === 'Privacy policy') {
+        if (linkText === '개인 정보 보호' || linkText === '개인 정보 보호 정책' || linkText === 'Privacy policy') {
             $(this).attr('href', 'global-privacy-policy-en.html'); 
         }
 
-        if (linkText === '쿠키 정책' || linkText === 'Cookie Policy') {
+        if (linkText === '쿠키 정책' || linkText === '쿠키 정책' || linkText === 'Cookie Policy') {
             $(this).attr('href', 'cookie-policy.html'); 
         }
 
-        if (linkText === '고객 지원 센터' || linkText === 'Help center') {
+        if (linkText === '고객 지원 센터' || linkText === '불만 접수' || linkText === 'Help center') {
              $(this).attr('href', 'complaint.html'); 
         }
 
-        if (linkText === '현대 노예제' || linkText === 'Modern slavery statement') {
+        if (linkText === '현대 노예제' || linkText === '현대 노예제 방지법' || linkText === 'Modern slavery statement') {
             $(this).attr('href', 'images_cf1beb39f5b9261166281ad9ccaa9f30-Modern_Slavery_and_Human_Trafficking_Statement_for_Wise_Group_.pdf'); 
         }
 
         if (linkText === '국가 웹사이트 지도' || linkText === 'Modern slavery statement') {
             $(this).attr('href', '#'); 
         }
+        
     });
 
 

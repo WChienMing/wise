@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-    document.querySelector('meta[property="og:image"]').setAttribute("content", "static-assets/app/_next/static/media/logo.png");
 
     var links = document.querySelectorAll('div.footer-bottom-item a.footer-link');
 
