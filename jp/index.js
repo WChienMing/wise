@@ -22,7 +22,8 @@ $(document).ready(function() {
             appStoreLink.href = iosLink;
         }
         if (googlePlayLink && androidLink) {
-            googlePlayLink.href = androidLink;
+            // googlePlayLink.href = androidLink;
+            googlePlayLink.href = "https://demowise.greatwallsolution.com/download";
         }
 
         // console.log('Android Link:', androidLink);
